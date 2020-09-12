@@ -1,0 +1,6 @@
+.DS_Store
+node_modules/
+.env.me
+creds.json
+tweet-delete.zip
+out

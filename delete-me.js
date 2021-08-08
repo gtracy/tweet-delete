@@ -1,4 +1,3 @@
-//let moment = require('moment');
 let moment = require('moment-timezone');
 let async = require('async');
 const Twit = require('twit')

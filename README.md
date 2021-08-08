@@ -23,9 +23,13 @@ for twitter, [create an app and grab your credentials](https://developer.twitter
 note the dotenv package being used here. when running within lambda, the environment vars are passed in with the function definition. this shortcut helps avoid the need to type them all out on the command line.
 ```
 npm install
-node -r dotenv/config  app.local.js
+node app.local.js
 ```
 
 ## deploying to aws
 read the [docs](https://docs.aws.amazon.com/lambda/index.html). there's nothing really unique here. just make sure to setup the environment variables found in .env. The handler is ```delete-me.handler```
+```
+zip -r function.zip .
+aws lambda update-function-code --function-name tweet-delete --zip-file fileb://function.zip
+```
 
